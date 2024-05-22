@@ -41,11 +41,12 @@
 >[deployment-nfs.yaml](deploy%2Fdeployment-nfs.yaml) \
 >[pvc-nfs.yaml](deploy%2Fpvc-nfs.yaml) 
 
-> Продемонстрировать возможность чтения и записи файла изнутри пода.\
-> Возможность записи:
-> ![img_4.png](img_4.png)
-> Возможность чтения:
-> ![img_5.png](img_5.png)
+
+>❗❗❗ ОБНОВЛЕНИЕ ❗❗❗\
+> Так как преподаватель сделал замечение, что должен использоваться автоматически созданный pv, а не создавать вручную, проверил название storageclass командой
+> ``microk8s kubectl get storageclasses.storage.k8s.io``, название класса **nfs**, удалил pv из [pvc-nfs.yaml](deploy%2Fpvc-nfs.yaml), приписал к pvc storageclass уже существующему pv.
+>Ниже обновленный скрин: ![img_6.png](img_6.png)
+
 
 Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 > [pvc-nfs.yaml](deploy%2Fpvc-nfs.yaml)\
